@@ -35,10 +35,11 @@ fastp_se_param: "--length_required 30 --cut_right --cut_window_size 4 --cut_mean
 fastp_nanopore_param: "--average_qual 9 --length_required 200 --trim_front1 10"
 fastp_hiplex_param: "--length_required 100 --cut_right --cut_window_size 4 --cut_mean_quality 20" #use Trimmomatic sliding window method
 
-virusDb: /ppq/data0/software/PVseek/db/plantvirus_genome.fasta
-virusTaxon: /ppq/data0/software/PVseek/db/plantvirus.gb_taxon.txt
-viralRefInfo: /ppq/data0/software/PVseek/db/plantvirus.info.txt
-badSeqIds: /ppq/data0/software/PVseek/db/unwantedSeqId.txt
+#databases
+virusDb: /paht/to/PVseek/db/plantvirus_genome.fasta #/ppq/data0/software/PVseek/db/plantvirus_genome.fasta
+virusTaxon: /paht/to/PVseek/db/plantvirus.gb_taxon.txt #/ppq/data0/software/PVseek/db/plantvirus.gb_taxon.txt
+viralRefInfo: /paht/to/PVseek/db/plantvirus.info.txt  #/ppq/data0/software/PVseek/db/plantvirus.info.txt
+badSeqIds: /paht/to/PVseek/db/unwantedSeqId.txt #/ppq/data0/software/PVseek/db/unwantedSeqId.txt
 
 
 #gobal variables, please do not change
