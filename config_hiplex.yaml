@@ -1,0 +1,52 @@
+#Snakemake setting file
+platform: HiPlex
+seq_type: 'se'  #'se' for single-end,
+strand1: ''  #'' for single-end file name without R1, 'R1' for single-end file name with R1 or R1_001
+strand2: 'R2' #keep it even if no R2
+fastp_hiplex_param: "--length_required 100 --cut_right --cut_window_size 4 --cut_mean_quality 20" #use Trimmomatic sliding window method
+mappingTool: bwa 
+bwa_param: " -B 4 "  #default bwa setting 
+#bwa_param: " -k 12 -A 1 -B 3 -O 1 -E 1 " #bwa loose mapping; 
+#bwa_param: "-B 9 -O 16" #BWA-mem-strict 
+
+#filter threshold
+#please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
+#Note: lower threshold, more false positives
+readNumThd: 100 #minimu read number (100) for a virus to be selected
+genomeCovThd: 0 #set up the genome coverage threshold to 0 to ignore genome covreage filter for HiPlex and Amplicon data
+
+number_of_threads: 16
+input_format: 'fq.gz'  #'fastq.gz'
+
+#coverage
+#if enable it (yes), coverage graph with primers will be plotted and virus depths by primers will be summarized
+coverage: "no"  #"yes"   
+
+#other mapping tool prameters, do not remove them
+bowtie_param: "-n 1 -k 1 -M 100 --best --strata"
+bowtie2_param: "--very-sensitive-local -k 1 --score-min L,20,1.0" #bowtie2 sensitive mapping
+minimap2_param: "-L --secondary=no -ax map-ont"
+
+#fastp parameters for other platforms, do not remove them
+fastp_pe_param: "--length_required 30 --cut_right --cut_window_size 4 --cut_mean_quality 20" #use Trimmomatic sliding window method
+fastp_se_param: "--length_required 30 --cut_right --cut_window_size 4 --cut_mean_quality 20" #use Trimmomatic sliding window method
+fastp_srna_param: "--length_required 15 --length_limit 40 --trim_poly_x --poly_x_min_len 5" #--cut_mean_quality 15
+fastp_nanopore_param: "--average_qual 9 --length_required 200 --trim_front1 10"
+
+#databases
+virusDb: /ppq/data0/software/PVseek/db/plantvirus_genome.fasta
+virusTaxon: /ppq/data0/software/PVseek/db/plantvirus.gb_taxon.txt
+viralRefInfo: /ppq/data0/software/PVseek/db/plantvirus.info.txt
+badSeqIds: /ppq/data0/software/PVseek/db/unwantedSeqId.txt
+
+#gobal variables, please do not change
+fastqDir: ""
+workDir: ""
+samples: ""
+
+run_info:
+  raw: raw                                #raw fastq file directoy
+  log: logs                               #log files diretory
+  trim: trimmed                           #trimmed directory
+  map: mapping                            #mapping reads directory   
+  report: report                          #report directory    

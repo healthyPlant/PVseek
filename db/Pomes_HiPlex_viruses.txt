@@ -1,0 +1,61 @@
+Name	Acronym	TaxonId	Reference	ForwardPrimerFile	ReversePrimerFile
+Apple chlorotic leaf spot virus	ACLSV	12175	NC_001409.1	ACLSV_primer_F.fa	ACLSV_primer_R.fa
+Apple dimple fruit viroid	ADFVd	73494	NC_003463.1	ADFVd_primer_F.fa	ADFVd_primer_R.fa
+Apple fruit crinkle viroid	AFCVd	190808	NC_003777.1	AFCVd_primer_F.fa	AFCVd_primer_R.fa
+Apple green crinkle associated virus	AGCaV	1211388	NC_018714.1	AGCaV_primer_F.fa	AGCaV_primer_R.fa
+Apple hammerhead viroid-like circular RNA	AHVd	1737346	NC_028132.1	AHVd_primer_F.fa	AHVd_primer_R.fa
+Apple hammerhead viroid	AHVd	2485233	NC_028132.1	AHVd_primer_F.fa	AHVd_primer_R.fa
+Apple luteovirus 1	ALV	2170544	NC_040680.1	ALV-1_primer_F.fa	ALV-1_primer_R.fa
+Apple mosaic virus RNA1	ApMV	12319	NC_003464.1	ApMV-RNA1_primer_F.fa	ApMV-RNA1_primer_R.fa
+Apple mosaic virus RNA2	ApMV	12319	NC_003465.1	ApMV-RNA2_primer_F.fa	ApMV-RNA2_primer_R.fa
+Apple mosaic virus RNA3	ApMV	12319	NC_003480.1	ApMV-RNA3_primer_F.fa	ApMV-RNA3_primer_R.fa
+Apple rubbery wood virus 1 Segment L	ARW-1	2164102	NC_055390.1	ARW-1_SegL_primer_F.fa	ARW-1_SegL_primer_R.fa
+Apple rubbery wood virus 1 Segment M	ARW-1	2164102	NC_055391.1	ARW-1_SegM_primer_F.fa	ARW-1_SegM_primer_R.fa
+Apple rubbery wood virus 1 Segment S	ARW-1	2164102	NC_055392.1	ARW-1_SegS_primer_F.fa	ARW-1_SegS_primer_R.fa
+Apple rubbery wood virus 2 Segment Sb	ARW-2	2164103	NC_055533.1	ARW-2_SegSb_primer_F.fa	ARW-2_SegSb_primer_R.fa
+Apple rubbery wood virus 2 Segment L	ARW-2	2164103	NC_055534.1	ARW-2_SegL_primer_F.fa	ARW-2_SegL_primer_R.fa
+Apple rubbery wood virus 2 Segment Sa	ARW-2	2164103	NC_055535.1	ARW-2_SegSa_primer_F.fa	ARW-2_SegSa_primer_R.fa
+Apple rubbery wood virus 2 Segment Ma	ARW-2	2164103	NC_055536.1	ARW-2_SegMa_primer_F.fa	ARW-2_SegMa_primer_R.fa
+Apple rubbery wood virus 2 Segment Mb	ARW-2	2164103	NC_055537.1	ARW-2_SegMb_primer_F.fa	ARW-2_SegMb_primer_R.fa
+Apple scar skin viroid	ASSVd	12895	NC_001340.1	ASSVd_primer_F.fa	ASSVd_primer_R.fa
+Apple stem grooving virus	ASGV	28347	NC_001749.2	ASGV_primer_F.fa	ASGV_primer_R.fa
+Apple stem pitting virus	ASPV	35350	NC_003462.2	ASPV_primer_F.fa	ASPV_primer_R.fa
+Asian prunus virus 2	APV2	351426	NC_028868.1	APV2_primer_F.fa	APV2_primer_R.fa
+Asian prunus virus 3	APV3	351428	NC_028975.1	APV3_primer_F.fa	APV3_primer_R.fa
+Blackberry chlorotic ringspot virus RNA1	BCRV	339420	NC_011553.1	BCRV-RNA1_primer_F.fa	BCRV-RNA1_primer_R.fa
+Blackberry chlorotic ringspot virus RNA2	BCRV	339420	NC_011554.1	BCRV-RNA2_primer_F.fa	BCRV-RNA2_primer_R.fa
+Blackberry chlorotic ringspot virus RNA3	BCRV	339420	NC_011555.2	BCRV-RNA3_primer_F.fa	BCRV-RNA3_primer_R.fa
+Cherry green ring mottle virus	CGRMV	65467	NC_001946.1	CGRMV_primer_F.fa	CGRMV_primer_R.fa
+Cherry leaf roll virus RNA1	CLRV	12615	NC_015414.1	CLRV-RNA1_primer_F.fa	CLRV-RNA1_primer_R.fa
+Cherry leaf roll virus RNA2	CLRV	12615	NC_015415.1	CLRV-RNA2_primer_F.fa	CLRV-RNA2_primer_R.fa
+Cherry necrotic rusty mottle virus	CNRMV	129143	NC_002468.1	CNRMV_primer_F.fa	CNRMV_primer_R.fa
+Cherry virus A	CVA	42882	NC_003689.1	CVA_primer_F.fa	CVA_primer_R.fa
+Citrus concave gum-associated virus RNA1	CCGaV	2024604	NC_035759.1	CCGaV-RNA1_primer_F.fa	CCGaV-RNA1_primer_R.fa
+Citrus concave gum-associated virus RNA2	CCGaV	2024604	NC_035454.1	CCGaV-RNA2_primer_F.fa	CCGaV-RNA2_primer_R.fa
+Citrus virus A RNA1	CiVA	2484986	MG764565.1	CiVA-RNA1_primer_F.fa	CiVA-RNA1_primer_R.fa
+Citrus virus A RNA2	CiVA	2484986	MG764566.1	CiVA-RNA2_primer_F.fa	CiVA-RNA2_primer_R.fa
+Hop stunt viroid	HSVd	12893	NC_001351.1	HSVd_primer_F.fa	HSVd_primer_R.fa
+Little cherry virus 1	LCV-1	217686	NC_001836.1	LCV1_primer_F.fa	LCV1_primer_R.fa
+Little cherry virus 2	LCV-2	154339	NC_005065.1	LCV2_primer_F.fa	LCV2_primer_R.fa
+Nectarine stem pitting associated virus	NSPaV	2560614	NC_027211.1	NSPaV_primer_F.fa	NSPaV_primer_R.fa
+Nectarine virus M	NeVM	1778580	NC_029063.1	NeVM_primer_F.fa	NeVM_primer_R.fa
+Peach associated luteovirus	PaLV	2006498	NC_034970.1	PaLV_primer_F.fa	PaLV_primer_R.fa
+Peach chlorotic leaf spot virus	PCLSV	2358294	MH084695.1	PCLSV_primer_F.fa	PCLSV_primer_R.fa
+Peach latent mosaic viroid	PLMVd	12894	NC_003636.1	PLMVd_primer_F.fa	PLMVd_primer_R.fa
+Pear alphapartitivirus RNA1	PAPV	1968821	LC221826.1	PAPV-RNA1_primer_F.fa	PAPV-RNA1_primer_R.fa
+Pear alphapartitivirus RNA2	PAPV	1968821	LC221827.1	PAPV-RNA2_primer_F.fa	PAPV-RNA2_primer_R.fa
+Pear blister canker viroid	PBCVd	12783	NC_001830.1	PBCVd_primer_F.fa	PBCVd_primer_R.fa
+Phaseolus vulgaris alphaendornavirus 1	PvEV1	1188792	NC_039217.1	PvEV1_primer_F.fa	PvEV1_primer_R.fa
+Phaseolus vulgaris alphaendornavirus 2	PvEV2	1188793	NC_038422.1	PvEV2_primer_F.fa	PvEV2_primer_R.fa
+Plum bark necrosis stem pitting-associated virus	PBNSPaV	675077	NC_009992.1	PBNSPaV_primer_F.fa	PBNSPaV_primer_R.fa
+Prune dwarf virus RNA1	PDV	33760	NC_008039.1	PDV-RNA1_primer_F.fa	PDV-RNA1_primer_R.fa
+Prune dwarf virus RNA2	PDV	33760	NC_008037.1	PDV-RNA2_primer_F.fa	PDV-RNA2_primer_R.fa
+Prune dwarf virus RNA3	PDV	33760	NC_008038.1	PDV-RNA3_primer_F.fa	PDV-RNA3_primer_R.fa
+Prunus necrotic ringspot virus RNA1	PNRSV	37733	NC_004362.1	PNRSV-RNA1_primer_F.fa	PNRSV-RNA1_primer_R.fa
+Prunus necrotic ringspot virus RNA2	PNRSV	37733	NC_004363.1	PNRSV-RNA2_primer_F.fa	PNRSV-RNA2_primer_R.fa
+Prunus necrotic ringspot virus RNA3	PNRSV	37733	NC_004364.1	PNRSV-RNA3_primer_F.fa	PNRSV-RNA3_primer_R.fa
+Prunus virus T	PrVT	1472425	NC_024686.1	PrVT_primer_F.fa	PrVT_primer_R.fa
+Tobacco ringspot virus RNA1	TobRSV	12282	NC_005097.1	TobRSV-RNA1_primer_F.fa	TobRSV-RNA1_primer_R.fa
+Tobacco ringspot virus RNA2	TobRSV	12282	NC_005096.1	TobRSV-RNA2_primer_F.fa	TobRSV-RNA2_primer_R.fa
+Tomato ringspot virus RNA1	TomRSV	12280	NC_003840.1	TomRSV-RNA1_primer_F.fa	TomRSV-RNA1_primer_R.fa
+Tomato ringspot virus RNA2	TomRSV	12280	NC_003839.2	TomRSV-RNA2_primer_F.fa	TomRSV-RNA2_primer_R.fa
