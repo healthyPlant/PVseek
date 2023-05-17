@@ -1,0 +1,163 @@
+#Snakemake setting file
+
+#*******Sequencing platform****************************
+#please comment unused ones
+#****************************************************
+platform: Illumina_pe  #Illumina paired-end read sequencing, RNA-seq 
+seq_type: 'pe'  #'se' for single-end,
+strand1: 'R1'  #'' for single-end file name without R1, 'R1' for single-end file name with R1 or R1_001
+strand2: 'R2'
+#strand1: "1" #this NCBI SRA format
+#strand2: "2"
+fastp_pe_param: "--length_required 30 --cut_right --cut_window_size 4 --cut_mean_quality 20" #use Trimmomatic sliding window method
+
+mappingTool: bowtie2 #bwa 
+bowtie2_param: "--very-sensitive-local -k 100 --score-min L,20,1.0" #bowtie2 sensitive mapping
+#bowtie_param: "-n 1 -k 1 -M 100 --best --strata"
+
+#filter threshold
+#please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
+#Note: lower threshold, more false positives
+readNumThd: 100 #minimu read number (10) for a virus to be selected
+genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
+
+
+#****************************************************
+#platform: Illumina_se  #Illumina single-read sequencing
+#platform: Illumina_se  #Illumina single-read sequencing
+#seq_type: 'se'  #'se' for single-end,
+#strand1: 'R1'  #'' for single-end file name without R1, 'R1' for single-end file name with R1 or R1_001
+#strand2: 'R2' #keep it even if no R2
+#fastp_se_param: "--length_required 30 --cut_right --cut_window_size 4 --cut_mean_quality 20" #use Trimmomatic sliding window method
+#mappingTool: bwa #bowtie2
+#bwa_param: " -B 4 "  #default bwa setting #" -k 12 -A 1 -B 3 -O 1 -E 1 " #bwa loose mapping; 
+
+#filter threshold
+#please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
+#Note: lower threshold, more false positives
+#readNumThd: 20 #minimu read number (20) for a virus to be selected
+#genomeCovThd: 0.20 #minimum genome coverage (20%) for a virus to be selected
+#*********************************************************************
+
+
+#****************************************************
+#platform: HiPlex
+#platform: HiPlex
+#seq_type: 'se'  #'se' for single-end,
+#strand1: ''  #'' for single-end file name without R1, 'R1' for single-end file name with R1 or R1_001
+#strand2: 'R2' #keep it even if no R2
+#fastp_hiplex_param: "--length_required 100 --cut_right --cut_window_size 4 --cut_mean_quality 20" #use Trimmomatic sliding window method
+#mappingTool: bwa 
+#bwa_param: " -B 4 "  #default bwa setting 
+#bwa_param: " -k 12 -A 1 -B 3 -O 1 -E 1 " #bwa loose mapping; 
+#bwa_param: "-B 9 -O 16" #BWA-mem-strict 
+
+#filter threshold
+#please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
+#Note: lower threshold, more false positives
+#readNumThd: 100 #minimu read number (100) for a virus to be selected
+#genomeCovThd: 0 #set up the genome coverage threshold to 0 to ignore genome covreage filter for HiPlex and Amplicon data
+#*********************************************************************
+
+#****************************************************
+#platform: Illumina_sRNA  #Illumina small RNA sequencing
+#For single-end file
+#seq_type: 'se'  #'se' for single-end, 'pe' for paired-end
+#strand1: ''
+#strand2: 'R2' #keep it even if no R2
+
+#mapping
+#mappingTool: bowtie
+#bowtie_param: "-n 1 -k 1 -M 100 --best --strata"
+#fastp 
+#fastp_srna_param: "--length_required 15 --length_limit 40 --trim_poly_x --poly_x_min_len 5" #--cut_mean_quality 15
+
+#filter threshold
+#please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
+#Note: lower threshold, more false positives
+#readNumThd: 10 #minimu read number (10) for a virus to be selected
+#genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
+#*********************************************************************
+
+#****************************************************
+#platform: Oxford Nanopore
+#platform: Nanopore  #Nanopore sequencing
+#seq_type: 'se'  #'se' for single-end, 'pe' for paired-end
+#strand1: ''  #'' for single-end file name without R1, 'R1' for single-end file name with R1 or R1_001
+#strand2: 'R2' #keep it even if no R2
+
+#mapping
+#mappingTool: minimap2
+#minimap2_param: "-L --secondary=no -ax map-ont" 
+#Fastp parameters
+#fastp_nanopore_param: "--average_qual 9 --length_required 200 --trim_front1 10 --disable_quality_filtering" #if basecaller is not Guppy, use --disable_quality_filtering
+
+#filter threshold
+#please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
+#Note: lower threshold, more false positives
+#readNumThd: 10 #minimu read number (10) for a virus to be selected
+#genomeCovThd: 0.30 #minimum genome coverage (30%) for a virus to be selected
+
+#HiPlex coverage graph plotting needs primer information, whihc need extra steps to prepare. please keep it as 'no'
+coverage: "no"   
+#*********************************************************************************************
+
+number_of_threads: 16
+input_format: 'fastq.gz'
+
+#mapping tools and parameters
+#mapping tools are bwa, bowtie2, bowtie, minimap2
+#bwa or bowtie2 for RNA-seq data, AmpliSeq or HIPlex 
+#bowtie for small RNA seq data
+#minimap2 for Nanopore
+#mappingTool: bowtie2 #bowtie, bwa, bowtie2, minimap2
+
+
+#filter threshold
+#please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
+#Note: lower threshold, more false negatives
+
+#For small RNA-seq
+#readNumThd: 10 #minimu read number (10) for a virus to be selected
+#genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
+
+#For Nanopore
+#readNumThd: 100 #minimu read number (10) for a virus to be selected
+#genomeCovThd: 0.80 #minimum genome coverage (10%) for a virus to be selected
+
+#virus coverage graph
+#if enable it (yes), coverage graph will be plotted and consensus sequences will be generated
+coverage: "no"  #"yes"   
+
+#mapping
+#bwa_param: " -B 4 "  #default bwa setting #" -k 12 -A 1 -B 3 -O 1 -E 1 " #bwa loose mapping; 
+bowtie_param: "-n 1 -k 1 -M 100 --best --strata"
+#bowtie2_param: "--very-sensitive-local -k 1 --score-min L,20,1.0" #bowtie2 sensitive mapping
+#Nanopore parameters
+#mappingTool: minimap2
+nanofilt_param: "-q 9 -l 200 --headcrop 10"
+minimap2_param: "-L --secondary=no -ax map-ont"
+
+#fastp_pe_param: "--length_required 30 --cut_right --cut_window_size 4 --cut_mean_quality 20" #use Trimmomatic sliding window method
+#fastp_se_param: "--length_required 30 --cut_right --cut_window_size 4 --cut_mean_quality 20" #use Trimmomatic sliding window method
+fastp_srna_param: "--length_required 15 --length_limit 40 --trim_poly_x --poly_x_min_len 5" #--cut_mean_quality 15
+fastp_hiplex_param: "--length_required 100 --cut_right --cut_window_size 4 --cut_mean_quality 20" #use Trimmomatic sliding window method
+fastp_nanopore_param: "--average_qual 9 --length_required 200 --trim_front1 10"
+
+#databases
+virusDb: /paht/to/PVseek/db/plantvirus_genome.fasta #/ppq/data0/software/PVseek/db/plantvirus_genome.fasta
+virusTaxon: /paht/to/PVseek/db/plantvirus.gb_taxon.txt #/ppq/data0/software/PVseek/db/plantvirus.gb_taxon.txt
+viralRefInfo: /paht/to/PVseek/db/plantvirus.info.txt  #/ppq/data0/software/PVseek/db/plantvirus.info.txt
+badSeqIds: /paht/to/PVseek/db/unwantedSeqId.txt #/ppq/data0/software/PVseek/db/unwantedSeqId.txt
+
+#gobal variables, please do not change
+fastqDir: ""
+workDir: ""
+samples: ""
+
+run_info:
+  raw: raw                                #raw fastq file directoy
+  log: logs                               #log files diretory
+  trim: trimmed                           #trimmed directory
+  map: mapping                            #mapping reads directory   
+  report: report                          #report directory    

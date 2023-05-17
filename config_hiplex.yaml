@@ -18,9 +18,8 @@ genomeCovThd: 0 #set up the genome coverage threshold to 0 to ignore genome covr
 number_of_threads: 16
 input_format: 'fq.gz'  #'fastq.gz'
 
-#coverage
-#if enable it (yes), coverage graph with primers will be plotted and virus depths by primers will be summarized
-coverage: "no"  #"yes"   
+#HiPlex coverage graph plotting needs primer information, whihc need extra steps to prepare. please keep it as 'no'
+coverage: "no"   
 
 #other mapping tool prameters, do not remove them
 bowtie_param: "-n 1 -k 1 -M 100 --best --strata"

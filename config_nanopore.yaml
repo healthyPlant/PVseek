@@ -10,18 +10,18 @@ minimap2_param: "-L --secondary=no -ax map-ont"
 #Fastp parameters
 fastp_nanopore_param: "--average_qual 9 --length_required 200 --trim_front1 10 --disable_quality_filtering" #if basecaller is not Guppy, use --disable_quality_filtering
 
-number_of_threads: 16
-input_format: 'fastq.gz'
-
-#virus coverage graph
-#if enable it (yes), coverage graph will be plotted and consensus sequences will be generated
-coverage: "no"  #"yes"  or "no"
-
 #filter threshold
 #please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
 #Note: lower threshold, more false positives
 readNumThd: 10 #minimu read number (10) for a virus to be selected
 genomeCovThd: 0.30 #minimum genome coverage (30%) for a virus to be selected
+
+number_of_threads: 16
+input_format: 'fastq.gz'
+
+#virus coverage graph
+#if enable it (yes), coverage graph will be plotted and consensus sequences will be generated
+coverage: "no"  
 
 #databases
 virusDb: /paht/to/PVseek/db/plantvirus_genome.fasta #/ppq/data0/software/PVseek/db/plantvirus_genome.fasta
