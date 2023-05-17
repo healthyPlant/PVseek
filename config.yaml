@@ -99,7 +99,7 @@ genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
 #genomeCovThd: 0.30 #minimum genome coverage (30%) for a virus to be selected
 
 #HiPlex coverage graph plotting needs primer information, whihc need extra steps to prepare. please keep it as 'no'
-coverage: "no"   
+#coverage: "no"   
 #*********************************************************************************************
 
 number_of_threads: 16
