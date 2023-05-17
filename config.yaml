@@ -24,7 +24,6 @@ genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
 
 #****************************************************
 #platform: Illumina_se  #Illumina single-read sequencing
-#platform: Illumina_se  #Illumina single-read sequencing
 #seq_type: 'se'  #'se' for single-end,
 #strand1: 'R1'  #'' for single-end file name without R1, 'R1' for single-end file name with R1 or R1_001
 #strand2: 'R2' #keep it even if no R2
@@ -41,7 +40,6 @@ genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
 
 
 #****************************************************
-#platform: HiPlex
 #platform: HiPlex
 #seq_type: 'se'  #'se' for single-end,
 #strand1: ''  #'' for single-end file name without R1, 'R1' for single-end file name with R1 or R1_001
