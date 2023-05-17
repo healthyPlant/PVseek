@@ -1,4 +1,4 @@
-# PVseek: a lightweight cross-platform plant viral diagnostic pipeline for high throughput sequencing data (RNA-seq, small RNA-seq, AmpliSeq/HiPlex, Nanopore)
+# PVseek: a lightweight cross-platform plant viral diagnostic pipeline for high throughput sequencing data
 
 PVseek is an open-source bioinformatics pipeline for plant virus detection using virous high throughput sequencing data, including Illumina RNA-seq, small RNA-seq, AmpliSeq/HiPlex, and Oxford Nanopore data. It's a fast analysis tool for virus diagnosis using a regular computer/laptop. The pipeline is written in [Snakemake](https://snakemake.readthedocs.io) (Köster and Rahmann 2018), a workflow management system for the development of data analysis workflows. PVseek consists of three major stages: (1). read QC; (2). mapping reads to reference sequences; (3). counting mapped reads for viruses and calculating their genome coverages. PVseek is developed by the USDA APHIS Plant Germplasm Quarantine Program (PGQP).  
 
