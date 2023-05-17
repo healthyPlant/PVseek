@@ -83,7 +83,6 @@ def getPrimerPosition(primerBedFile, ypPos):
     with open(primerBedFile, 'r') as fin:
         for line in fin:
             cells = line.strip().split("\t")
-
             #adjst y axis position, every three segments a cycle
             ypPos1 = ypPos
             if cnt % 3 == 1:
@@ -117,7 +116,13 @@ def getAmpAvgDepth(depth, forwardPrimer, reversePrimer):
         #print(startIndex, endIndex)
         ampDepth = depth[startIndex : endIndex]
         if ampDepth:
-            median_dep = np.median(ampDepth)
+            midIndex = int(len(ampDepth)/2)
+            #get middle 20 values
+            mid20 = ampDepth[midIndex-10 : midIndex+10]
+            #print(mid20)
+            #median_dep = np.median(ampDepth)
+            #use the middle 20 values average to represent the amplicon depth
+            median_dep = np.mean(mid20)
         else:
             median_dep = 0 #in case no depth in this range, ampDepth is empty
         ampAvgDep.append(median_dep)
