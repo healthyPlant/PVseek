@@ -128,7 +128,7 @@ input_format: 'fastq.gz'
 coverage: "no"  #"yes"   
 
 #mapping
-#bwa_param: " -B 4 "  #default bwa setting #" -k 12 -A 1 -B 3 -O 1 -E 1 " #bwa loose mapping; 
+bwa_param: " -B 4 "  #default bwa setting #" -k 12 -A 1 -B 3 -O 1 -E 1 " #bwa loose mapping; 
 bowtie_param: "-n 1 -k 1 -M 100 --best --strata"
 #bowtie2_param: "--very-sensitive-local -k 1 --score-min L,20,1.0" #bowtie2 sensitive mapping
 #Nanopore parameters
