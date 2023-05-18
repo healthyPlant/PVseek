@@ -18,7 +18,7 @@ PVseek is an open-source bioinformatics pipeline for plant virus detection using
    1. Sort and index alignments by [`SAMtools`](https://github.com/samtools/samtools)
    2. Consensus callers by [`BCFTools`](http://samtools.github.io/bcftools/bcftools.html) 
    3. Genome coverage by [`BEDTools`](https://github.com/arq5x/bedtools2)
-4. Sequence processing tool: [`seqkt`](https://github.com/lh3/seqtk)
+4. Sequence processing tool: [`seqtk`](https://github.com/lh3/seqtk)
 
 ## Quick start
 ### Installation
@@ -45,7 +45,7 @@ First, pick up the right config file for your sequencing platform.
 2. Illumina single read RNA-seq: `config_se.yaml`
 3. Illumina small RNA-seq: `config_sRNA.yaml`
 4. Illumina AmpliSeq/HiPlex: `config_hiplex.yaml`
-5. Oxford Nanopore: `config_nanopore.yaml`
+5. Oxford Nanopore: `config_Nanopore.yaml`
 
 Second, customize the workflow based on your needs in the config file, such as your sequence file extension and database paths. Please see the details in [wiki](https://github.com/healthyPlant/PVseek/wiki).
 
