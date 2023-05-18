@@ -4,7 +4,7 @@ PVseek is an open-source bioinformatics pipeline for plant virus detection using
 
 # Workflow
 
-![scheme of workflow](doc/*VDflow_scheme*.png?raw=true)
+![scheme of workflow](doc/PVSeek_Workflow.png?raw=true)
 
 ## Tools in pipeline
 
