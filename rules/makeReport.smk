@@ -33,8 +33,6 @@ rule generate_report:
         python {scripts_dir}/summarizeMapping.py -w {workDir} -f {badSeqIds} -o {output}
         #draw coverage graph
         if [[ {coverage} == "yes" ]]; then
-            if [[ {platform} != "HiPlex" ]]; then
-                python {scripts_dir}/batchPlotViralCoverage.py -w {workDir} -d {virusDb} -s {scripts_dir} -m {mappingTool} -o {workDir}/mapping/coverage
-            fi
+            python {scripts_dir}/batchPlotViralCoverage.py -w {workDir} -d {virusDb} -s {scripts_dir} -m {mappingTool} -o {workDir}/mapping/coverage
         fi
         """

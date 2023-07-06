@@ -14,8 +14,8 @@ bowtie2_param: "--very-sensitive-local -k 100 --score-min L,20,1.0" #bowtie2 sen
 #filter threshold
 #please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
 #Note: lower threshold, more false positives
-readNumThd: 100 #minimu read number (10) for a virus to be selected
-genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
+readNumThd: 50 #minimu read number (50) for a virus to be selected
+genomeCovThd: 0.20 #minimum genome coverage (20%) for a virus to be selected
 
 number_of_threads: 16
 input_format: 'fastq.gz'

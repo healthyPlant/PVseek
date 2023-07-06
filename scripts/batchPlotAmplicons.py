@@ -74,17 +74,7 @@ def callSubprocess(parallelJobs, jobs):
     threadNum = jobs  #the number of parrallel jobs
     for i in range(len(parallelJobs)):
         command = parallelJobs[i]
-        #try:
         pipe = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True) #, shell=True
-        #output, error = pipe.communicate()
-        #print(output)
-        #output = output.decode("utf-8").strip()
-        #print(pipe.stderr.readline())
-        #print(pipe.stdout.readline())
-        #if pipe.returncode != 0: 
-        #    print("plotAmplicons.py %d %s %s" % (pipe.returncode, output, error))
-        #except:
-        #    print("Error: please check arguments: ", " ".join(command))
         ps.append(pipe)
         threadNum -= 1
 

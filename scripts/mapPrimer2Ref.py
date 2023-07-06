@@ -2,14 +2,14 @@
 ######################################################################
 #Alex Hu <xiaojun.hu@usda.gov>
 #Updated: 04/18/2023
-##This program draws amplicon coverage graphs for detected viruses in a sample and calculate median coverage of the amplicons
+##This program gets primer positions in the reference
 #
 #Required Parameters:
 #   -n, --reference X......................reference name from the PVseek report
 #   -d, --database X.......................plant virus database for PVseek, a fasta file
 #   -f, --forward X........................forward primer fasta file
 #   -r, --reverse X........................reverse primer fasta file
-#   -o, --output X.........................coverage grpah 
+#   -o, --output X.........................output folder
 ######################################################################
 
 import argparse
@@ -29,8 +29,6 @@ def getRefseq(outFolder, refName, db):
     command = "seqtk subseq " + db + " " + output + " > " + output + ".fasta"
     #print(command)
     os.system(command)
-    #if os.system(command) != 0:
-    #    raise Exception(refName, ' does not exist in the database', db)
         
     if os.stat(output + ".fasta").st_size == 0:
         print('Exits because', refName, 'does not exist in the database', db)

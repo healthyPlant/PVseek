@@ -15,6 +15,34 @@ import glob
 import os
 import pandas as pd
 
+def catRawContent(mapFiles, outFile):
+    """
+    Concatenate all mapping unfiltered results
+    """
+    # create an Empty DataFrame object
+    df = pd.DataFrame()
+    empty_df = {'Sample': 'NA', 'TaxonId': 'NA', 'ReadInTaxon': 'NA', 'Reference': 'NA', 'RefCoverage': 'NA', 'Virus': 'NA', 'TaxonPath': 'NA', 'RefDescription': 'NA'}
+    for mf in mapFiles:
+        sample = os.path.basename(mf).replace(".mappedRef.full.txt","")
+        #print(sample)
+        if os.stat(mf).st_size == 0: #for empty files, file size is 0
+            df1 = empty_df
+            df1['Sample'] = sample
+        else:
+            df1 = pd.read_csv(mf, sep='\t', header = 0)
+            if len(df1.index) == 0:  #for empty rows
+                df1 = empty_df
+                df1['Sample'] = sample
+        if isinstance(df1, dict): #add a dict to pd
+            df = df.append(df1, ignore_index = True)
+        else:
+            df = pd.concat([df, df1], ignore_index = True)
+
+    #df = df[~df.Reference.isin(badIds)] #filter bad reference sequence 
+
+    df.to_csv(outFile, index=False, sep='\t')
+
+
 def catContent(mapFiles, badIds, outFile):
     """
     Concatenate all mapping results
@@ -68,8 +96,14 @@ def main():
     #get bad sequence Ids
     badIds = [ line.strip() for line in open(badIdFile) ]
 
+    #cat filtered result
     mapFiles = glob.glob(mapDir + '/*.mappedRef.filtered.txt')
     catContent(mapFiles, badIds, outFile)
+
+    #cal all unfiltered mapping result
+    mapFiles = glob.glob(mapDir + '/*.mappedRef.full.txt')
+    outFile1 = outFile.replace(".txt", ".unfiltered.txt")
+    catRawContent(mapFiles, outFile1)
 
 if __name__ == "__main__":
     main()

@@ -58,9 +58,6 @@ def batchDrawPlot(reportFile, virusDbFasta, scriptFolder, workFolder, outputFold
             pipe = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True) #, shell=True
             output, error = pipe.communicate()
             print(output)
-            #output = output.decode("utf-8").strip()
-            #print(pipe.stderr.readline())
-            #print(pipe.stdout.readline())
             if pipe.returncode != 0: 
                 print("plotAmplicons.py %d %s %s" % (pipe.returncode, output, error))
             pipe.wait()
@@ -74,9 +71,9 @@ if __name__ == '__main__':
     parser.add_argument('-o','--output',dest='outputFolder', required=True, default="", help='path to folder having amplicon graphs')
 
     args = parser.parse_args()
-    workFolder = args.workdir #"/ppq/data0/test_PVseek/1_A1"
-    virusDbFasta = args.database #"/ppq/data0/software/PVseek/db/plantvirus.fa"
-    scriptFolder = args.script #"/ppq/data0/software/PVseek/scripts"
+    workFolder = args.workdir #"~/test_PVseek/1_A1"
+    virusDbFasta = args.database #"/path/to/software/PVseek/db/plantvirus.fa"
+    scriptFolder = args.script #"/path/to//software/PVseek/scripts"
     mappingTool = args.mapping #bwa, bowtie, bowtie2, minimap2
     outputFolder = args.outputFolder
 

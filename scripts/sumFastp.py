@@ -23,8 +23,6 @@ def parseJson(jsonFile):
         data = json.load(f) #json.load() output a dict
 
     sample = os.path.basename(jsonFile).replace(".fastp.json","")
-    #print(data["summary"]["before_filtering"])
-    #print(data["summary"]["after_filtering"])
     rawReads = "{:.0f}".format(data["summary"]["before_filtering"]["total_reads"])
     rawYield = "{:.2f}".format(data["summary"]["before_filtering"]["total_bases"] / 1000000) 
     rawQ20Rate = "{:.2f}".format(data["summary"]["before_filtering"]["q20_rate"])

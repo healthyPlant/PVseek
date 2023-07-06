@@ -1,5 +1,4 @@
 FROM ubuntu:20.04
-MAINTAINER xhu556@gmail.com
 
 ENV DEBIAN_FRONTEND=noninteractive
 

@@ -87,20 +87,12 @@ def getFilteredSeqId(seqTaxonDict):
                 filteredTaxonDict[taxon].append(sname)
             else:
                 filteredTaxonDict[taxon] = [sname]
-    #print(len(filteredTaxonDict))
-    #print(seqTaxonDict)
 
     #check missed taxon after filtering
     #if the taxon is missed, put all filtered sequences back, leave them to cluster method to filter
     for taxon in taxonDict:
-        #print(taxon, len(taxonDict[taxon]), sep="\t", end="")
         if not taxon in filteredTaxonDict:
-            #print("\t",'0', end="\t")
-            #print(",".join(taxonDict[taxon]))
             filteredTaxonDict[taxon] = taxonDict[taxon] 
-        #else:
-            #print("\t", len(filteredTaxonDict[taxon]))
-    #print(filteredTaxonDict)
 
     for taxon in filteredTaxonDict:
         for seq in filteredTaxonDict[taxon]:

@@ -14,10 +14,6 @@ import multiprocessing
 import argparse
 import sys
 
-
-#viralInforFile = "test.txt" #"multipleSegmentViruses0.txt"
-#viralSeqFile = "plantvirus_genome.fasta"
-#viralSeqFile = ""
 def upcase_first_letter(s):
     """
     Upcase first letter of the sentence
@@ -121,16 +117,6 @@ if __name__ == '__main__':
                 i += segNum 
                 fout.write(name+"\t"+str(segNum)+"\t"+str(len(accs))+"\t"+";".join(segAcc)+"\t"+";".join(segDesc)+"\n")
     fout.close()
-
-    '''
-    outFile = "multipleSegmentViruses.txt"
-    fout = open(outFile, 'w')
-    for virus in viralDict:
-        fout.write(virus+"\t")
-        fout.write(str(len(viralDict[virus])) + "\t")
-        fout.write(",".join(viralDict[virus]) + "\n")
-    fout.close()
-    '''
 
     #check missed viruses
     print("total virus: ", len(viralDict))

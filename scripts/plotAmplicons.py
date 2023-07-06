@@ -313,8 +313,7 @@ def main():
     reads = options.reads
     fPrimerBedFile = options.forward_primer_file  #forward primers positions in the reference
     rPrimerBedFile = options.reverse_primer_file  #reverse primers positions in the reference  
-    #fPrimerBedFile = "outFolder/virus_primer_F.bed"
-    #rPrimerBedFile = "outFolder/virus_primer_R.bed"
+
     outFolder = options.output_folder
     if not os.path.exists(fPrimerBedFile) or not os.path.exists(rPrimerBedFile):
         print(fPrimerBedFile, "and/or", rPrimerBedFile, "do not exist. Exit!")

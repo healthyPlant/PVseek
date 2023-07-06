@@ -18,8 +18,8 @@ bowtie2_param: "--very-sensitive-local -k 100 --score-min L,20,1.0" #bowtie2 sen
 #filter threshold
 #please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
 #Note: lower threshold, more false positives
-readNumThd: 100 #minimu read number (10) for a virus to be selected
-genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
+readNumThd: 50 #minimu read number (50) for a virus to be selected
+genomeCovThd: 0.20 #minimum genome coverage (20%) for a virus to be selected
 
 
 #****************************************************
@@ -34,7 +34,7 @@ genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
 #filter threshold
 #please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
 #Note: lower threshold, more false positives
-#readNumThd: 20 #minimu read number (20) for a virus to be selected
+#readNumThd: 50 #minimu read number (50) for a virus to be selected
 #genomeCovThd: 0.20 #minimum genome coverage (20%) for a virus to be selected
 #*********************************************************************
 
@@ -53,7 +53,7 @@ genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
 #filter threshold
 #please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
 #Note: lower threshold, more false positives
-#readNumThd: 100 #minimu read number (100) for a virus to be selected
+#readNumThd: 1000 #minimu read number (1000) for a virus to be selected
 #genomeCovThd: 0 #set up the genome coverage threshold to 0 to ignore genome covreage filter for HiPlex and Amplicon data
 #*********************************************************************
 
@@ -120,8 +120,8 @@ input_format: 'fastq.gz'
 #genomeCovThd: 0.10 #minimum genome coverage (10%) for a virus to be selected
 
 #For Nanopore
-#readNumThd: 100 #minimu read number (10) for a virus to be selected
-#genomeCovThd: 0.80 #minimum genome coverage (10%) for a virus to be selected
+#readNumThd: 10 #minimu read number (10) for a virus to be selected
+#genomeCovThd: 0.30 #minimum genome coverage (30%) for a virus to be selected
 
 #virus coverage graph
 #if enable it (yes), coverage graph will be plotted and consensus sequences will be generated

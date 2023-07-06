@@ -97,6 +97,7 @@ def getCoverage(depthFile, refInforDict):
             covDict[ref] = f"{coverage:.2f}"
         else:
             print(ref, "does not in the database")
+            covDict[ref] = 'nan'
         
     return covDict 
 
@@ -133,7 +134,6 @@ def main():
     refInforDict = getRefInfor(refInforFile)
     taxonTotalRead, taxonRef = countTaxon(taxonDict, refDict)
     covDict = getCoverage(depthFile, refInforDict)
-    #sample = os.path.basename(mapFile).split(".")[0]
     sample = os.path.basename(mapFile).replace(".mappedRead.txt","")
 
     #output result
@@ -152,7 +152,10 @@ def main():
         if ref in covDict and taxonPath: 
             cov = float(covDict[ref])
             virus = taxonPath.split(";")[-2].strip()
-            fout1.write(sample + "\t" + taxon + "\t" + str(readNum) + "\t" + ref + "\t" + covDict[ref] + "\t" + virus + "\t" + taxonPath + "\t" + refInforDict[ref][1] + "\n")
+            if ref not in refInforDict:
+                fout1.write(sample + "\t" + taxon + "\t" + str(readNum) + "\t" + ref + "\t" + covDict[ref] + "\t" + virus + "\t" + taxonPath + "\tNone\n")
+            else:
+                fout1.write(sample + "\t" + taxon + "\t" + str(readNum) + "\t" + ref + "\t" + covDict[ref] + "\t" + virus + "\t" + taxonPath + "\t" + refInforDict[ref][1] + "\n")
 
         #filter viruses: 
         #1. For Amplicon or HiPlex data, the genome coverage is ignored, the only criteria is the mapped read number greater than the thresholds

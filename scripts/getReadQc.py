@@ -36,8 +36,6 @@ def getQualFromFastq(fastq_file):
     totalLength = 0
     lineno = 0
     #print(fastq_file)
-    #fin = open(fastq_file, "rt")
-    #if fastq_file.endswith(".gz"):
     fin = gzip.open(fastq_file, "rt")
     for line in fin:
         lineno += 1

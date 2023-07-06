@@ -12,14 +12,15 @@ bwa_param: " -B 4 "  #default bwa setting
 #filter threshold
 #please set up the appropriate read number threshold (readNumThd) and virus genome coverage threshold (genomeCovThd) according to your positive controls and negative controls
 #Note: lower threshold, more false positives
-readNumThd: 100 #minimu read number (100) for a virus to be selected
+readNumThd: 1000 #minimu read number (100) for a virus to be selected
 genomeCovThd: 0 #set up the genome coverage threshold to 0 to ignore genome covreage filter for HiPlex and Amplicon data
 
 number_of_threads: 16
 input_format: 'fq.gz'  #'fastq.gz'
 
-#HiPlex coverage graph plotting needs primer information, whihc need extra steps to prepare. please keep it as 'no'
-coverage: "no"   
+#virus coverage graph
+#if enable it (yes), coverage graph will be plotted and consensus sequences will be generated
+coverage: "no"  #"yes"   
 
 #other mapping tool prameters, do not remove them
 bowtie_param: "-n 1 -k 1 -M 100 --best --strata"
@@ -33,9 +34,9 @@ fastp_srna_param: "--length_required 15 --length_limit 40 --trim_poly_x --poly_x
 fastp_nanopore_param: "--average_qual 9 --length_required 200 --trim_front1 10"
 
 #databases
-virusDb: /paht/to/PVseek/db/plantvirus_genome.fasta #/ppq/data0/software/PVseek/db/plantvirus_genome.fasta
-virusTaxon: /paht/to/PVseek/db/plantvirus.gb_taxon.txt #/ppq/data0/software/PVseek/db/plantvirus.gb_taxon.txt
-viralRefInfo: /paht/to/PVseek/db/plantvirus.info.txt  #/ppq/data0/software/PVseek/db/plantvirus.info.txt
+virusDb: /paht/to/PVseek/db/Pomes_HiPlex_refSeq.fasta #/ppq/data0/software/PVseek/db/plantvirus_genome.fasta
+virusTaxon: /paht/to/PVseek/db/Pomes_HiPlex_refSeq.gb_taxon.txt #/ppq/data0/software/PVseek/db/plantvirus.gb_taxon.txt
+viralRefInfo: /paht/to/PVseek/db/Pomes_HiPlex_refSeq.info.txt  #/ppq/data0/software/PVseek/db/plantvirus.info.txt
 badSeqIds: /paht/to/PVseek/db/unwantedSeqId.txt #/ppq/data0/software/PVseek/db/unwantedSeqId.txt
 
 #gobal variables, please do not change

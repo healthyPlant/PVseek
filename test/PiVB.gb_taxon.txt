@@ -1,0 +1,8 @@
+MH727572.1	2507689	Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Ellioviricetes; Bunyavirales; Fimoviridae; Emaravirus; unclassified Emaravirus
+MH727573.1	2507689	Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Ellioviricetes; Bunyavirales; Fimoviridae; Emaravirus; unclassified Emaravirus
+MH727574.1	2507689	Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Ellioviricetes; Bunyavirales; Fimoviridae; Emaravirus; unclassified Emaravirus
+MH727575.1	2507689	Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Ellioviricetes; Bunyavirales; Fimoviridae; Emaravirus; unclassified Emaravirus
+MH727576.1	2507689	Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Ellioviricetes; Bunyavirales; Fimoviridae; Emaravirus; unclassified Emaravirus
+MH727577.1	2507689	Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Ellioviricetes; Bunyavirales; Fimoviridae; Emaravirus; unclassified Emaravirus
+MH727578.1	2507689	Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Ellioviricetes; Bunyavirales; Fimoviridae; Emaravirus; unclassified Emaravirus
+MH727579.1	2507689	Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Ellioviricetes; Bunyavirales; Fimoviridae; Emaravirus; unclassified Emaravirus
