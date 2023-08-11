@@ -34,7 +34,10 @@ def catRawContent(mapFiles, outFile):
                 df1 = empty_df
                 df1['Sample'] = sample
         if isinstance(df1, dict): #add a dict to pd
-            df = df.append(df1, ignore_index = True)
+            #df = df.append(df1, ignore_index = True) #As of pandas 2.0, append (previously deprecated) was removed.
+            #print(df1)
+            df2 = pd.DataFrame.from_dict([df1]) #convert a dict to a dataframe
+            df = pd.concat([df, df2], ignore_index = True)
         else:
             df = pd.concat([df, df1], ignore_index = True)
 
@@ -63,7 +66,10 @@ def catContent(mapFiles, badIds, outFile):
                 df1 = empty_df
                 df1['Sample'] = sample
         if isinstance(df1, dict): #add a dict to pd
-            df = df.append(df1, ignore_index = True)
+            #df = df.append(df1, ignore_index = True) #As of pandas 2.0, append (previously deprecated) was removed.
+            #print(df1)
+            df2 = pd.DataFrame.from_dict([df1]) #convert a dict to a dataframe
+            df = pd.concat([df, df2], ignore_index = True)
         else:
             df = pd.concat([df, df1], ignore_index = True)
 
