@@ -23,11 +23,11 @@ input_format: 'fastq.gz'
 #if enable it (yes), coverage graph will be plotted and consensus sequences will be generated
 coverage: "no"  
 
-#databases
-virusDb: /paht/to/PVseek/db/plantvirus_genome.fasta #/ppq/data0/software/PVseek/db/plantvirus_genome.fasta
-virusTaxon: /paht/to/PVseek/db/plantvirus.gb_taxon.txt #/ppq/data0/software/PVseek/db/plantvirus.gb_taxon.txt
-viralRefInfo: /paht/to/PVseek/db/plantvirus.info.txt  #/ppq/data0/software/PVseek/db/plantvirus.info.txt
-badSeqIds: /paht/to/PVseek/db/unwantedSeqId.txt #/ppq/data0/software/PVseek/db/unwantedSeqId.txt
+#database
+virusDb: /opt/PVseek/db/plantvirus_genome.fasta #/paht/to/PVseek/db/plantvirus_genome.fasta
+virusTaxon: /opt/PVseek/db/plantvirus.gb_taxon.txt #/paht/to/PVseek/db/plantvirus.gb_taxon.txt
+viralRefInfo: /opt/PVseek/db/plantvirus.info.txt #/paht/to/PVseek/db/plantvirus.info.txt
+badSeqIds: /opt/PVseek/db/unwantedSeqId.txt #/paht/to/PVseek/db/unwantedSeqId.txt
 
 #other mapping tool prameters, do not remove them
 bwa_param: " -B 4 "  #default bwa setting #" -k 12 -A 1 -B 3 -O 1 -E 1 " #bwa loose mapping; 
