@@ -47,7 +47,7 @@ First, pick up the right config file for your sequencing platform.
 4. Illumina AmpliconSeq/HiPlex: `config_hiplex.yaml`
 5. Oxford Nanopore: `config_Nanopore.yaml`
 
-Second, customize the workflow based on your needs in the config file, such as your sequence file extension and database paths. Please see the details in our [wiki](https://github.com/healthyPlant/PVseek/wiki).
+Second, customize the config file, such as sequencing platform, sequence file extension and database paths. Please see the details in our [wiki](https://github.com/healthyPlant/PVseek/wiki).
 
 ### Run PVseek
 Please check [dependencies requirements](https://github.com/healthyPlant/PVseek/wiki) first using a dry-run (-n flag). 
