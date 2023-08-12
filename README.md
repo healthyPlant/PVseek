@@ -47,7 +47,7 @@ First, pick up the right config file for your sequencing platform.
 4. Illumina AmpliconSeq/HiPlex: `config_hiplex.yaml`
 5. Oxford Nanopore: `config_Nanopore.yaml`
 
-Second, customize the workflow based on your needs in the config file, such as your sequence file extension and database paths. Please see the details in our [wiki](https://github.com/healthyPlant/PVseek/wiki).
+Second, customize the config file, such as sequencing platform, sequence file extension and database paths. Please see the details in our [wiki](https://github.com/healthyPlant/PVseek/wiki).
 
 ### Run PVseek
 Please check [dependencies requirements](https://github.com/healthyPlant/PVseek/wiki) first using a dry-run (-n flag). 
@@ -57,11 +57,11 @@ For fastq.gz reads input dry-run:
 $ snakemake  --configfile /path/to/PVseek/config_*.yaml -s /path/to/PVseek/Snakefile --config workDir=/path/to/output/folder fastqDir=/path/to/input/fastq/folder --cores [number of cores ex. 8] -n 
 ```
 
-If the dry-run succeeds, please remove '-n' parameter to run the pipeline. If you'd like to run it in the background, please use 'nohup'. For example:
+If the dry-run succeeds, please remove '-n' parameter to rerun the pipeline. If you'd like to run it in the background, please use 'nohup'. For example:
 ```shell
-$ nohup snakemake  --configfile /path/to/PVseek/config.yaml -s /path/to/PVseek/Snakefile --config workDir=/path/to/output/folder fastqDir=/path/to/input/fastq/folder --cores [number of cores ex. 8] &
+$ nohup snakemake  --configfile /path/to/PVseek/config_*.yaml -s /path/to/PVseek/Snakefile --config workDir=/path/to/output/folder fastqDir=/path/to/input/fastq/folder --cores [number of cores ex. 8] &
 ```
-**Important:** For workDir and fastqDir paths, full paths must be used.
+**Important:** For workDir and fastqDir paths, full paths must be used. Only fastq.gz or fq.gz (set "input_format: fq.gz" in config.yaml) sequence files can be accepted.
 
 You can view progress or errors in the file 'nohup.out' using the command
 
@@ -76,7 +76,7 @@ virusTaxon: /paht/to/PVseek/db/plantvirus.gb_taxon.txt
 viralRefInfo: /paht/to/PVseek/db/plantvirus.info.txt 
 ```
 
-Second, suppose our work directory is ~/test_PVseek_pe, then run the following command 
+Second, suppose your work directory is ~/test_PVseek_pe, then run the following command 
 ```
 snakemake  --configfile /path/to/PVseek/config_pe.yaml -s /path/to/PVseek/Snakefile --config workDir=~/test_PVseek_pe --fastqDir=/path/to/PVseek/test/data --core 8
 ```
@@ -89,7 +89,7 @@ Third, check the result in the output folder ~/test_PVseek_pe/report.
 ```
 docker pull healthyplant/pvseek
 ```
-Docker can help you avoid manually installing the software. You can use the docker image on many systems (Linux, Mac, Windows). PVseek docker image usage is in its [docker README](https://hub.docker.com/r/healthyplant/pvseek). 
+Docker can help you avoid manually installing the software. You can use the docker image on many systems (Linux, Mac, Windows). The PVseek docker image usage is in its [docker README](https://hub.docker.com/r/healthyplant/pvseek). 
 
 # Documentation
 
